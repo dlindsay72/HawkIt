@@ -22,13 +22,14 @@ class MainVC: UIViewController {
         super.viewDidLoad()
         
         collectionView.dataSource = self
+        ProductsService.shared.delegate = self
+        ProductsService.shared.observeProducts()
         
     }
 
     @IBAction func addBtnWasPressed(_ sender: Any) {
         AlertService.addProductAlert(in: self) { (product) in
-            self.products.append(product)
-            self.collectionView.reloadData()
+            ProductsService.shared.post(product: product)
         }
     }
     
@@ -38,6 +39,8 @@ class MainVC: UIViewController {
     
 
 }
+
+//MARK: - UICollectionViewDataSource
 
 extension MainVC: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -58,3 +61,22 @@ extension MainVC: UICollectionViewDataSource {
         
     }
 }
+
+//MARK: - ProductsServiceDelegate
+
+extension MainVC: ProductsServiceDelegate {
+    func didChange(products: [Product]) {
+        self.products = products
+        collectionView.reloadData()
+    }
+}
+
+
+
+
+
+
+
+
+
+

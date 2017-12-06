@@ -18,6 +18,8 @@
 		7B0E5CD11FD752000086A83B /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E5CD01FD752000086A83B /* AlertService.swift */; };
 		7B0E5CD31FD777800086A83B /* UserNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E5CD21FD777800086A83B /* UserNotificationService.swift */; };
 		7B0E5CD61FD782830086A83B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B0E5CD51FD782830086A83B /* GoogleService-Info.plist */; };
+		7B4F5C6D1FD8667D005AEE93 /* ProductsSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5C6C1FD8667D005AEE93 /* ProductsSnapshot.swift */; };
+		7B4F5C6F1FD875D5005AEE93 /* ProductsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4F5C6E1FD875D5005AEE93 /* ProductsService.swift */; };
 		7B968D331FD7879F0002029F /* FIRDatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B968D321FD7879F0002029F /* FIRDatabaseService.swift */; };
 		8BF4EA44089983E25CAEAE8D /* Pods_HawkIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B3303753402BC5CBA71D9D1 /* Pods_HawkIt.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		7B0E5CD21FD777800086A83B /* UserNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationService.swift; sourceTree = "<group>"; };
 		7B0E5CD41FD77AF70086A83B /* HawkIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HawkIt.entitlements; sourceTree = "<group>"; };
 		7B0E5CD51FD782830086A83B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B4F5C6C1FD8667D005AEE93 /* ProductsSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSnapshot.swift; sourceTree = "<group>"; };
+		7B4F5C6E1FD875D5005AEE93 /* ProductsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsService.swift; sourceTree = "<group>"; };
 		7B968D321FD7879F0002029F /* FIRDatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRDatabaseService.swift; sourceTree = "<group>"; };
 		9B3303753402BC5CBA71D9D1 /* Pods_HawkIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HawkIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F60C3BA01BE97BD99E139C73 /* Pods-HawkIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HawkIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HawkIt/Pods-HawkIt.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			children = (
 				7B0E5CCA1FD74D660086A83B /* Product.swift */,
 				7B0E5CCE1FD74F5A0086A83B /* Identifiers.swift */,
+				7B4F5C6C1FD8667D005AEE93 /* ProductsSnapshot.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				7B0E5CD01FD752000086A83B /* AlertService.swift */,
 				7B0E5CD21FD777800086A83B /* UserNotificationService.swift */,
 				7B968D321FD7879F0002029F /* FIRDatabaseService.swift */,
+				7B4F5C6E1FD875D5005AEE93 /* ProductsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -293,8 +299,10 @@
 				7B0E5CCD1FD74DB40086A83B /* ProductCell.swift in Sources */,
 				7B0A5D8C1FD7100B009C994F /* AppDelegate.swift in Sources */,
 				7B0E5CCF1FD74F5A0086A83B /* Identifiers.swift in Sources */,
+				7B4F5C6D1FD8667D005AEE93 /* ProductsSnapshot.swift in Sources */,
 				7B0E5CD11FD752000086A83B /* AlertService.swift in Sources */,
 				7B0E5CCB1FD74D660086A83B /* Product.swift in Sources */,
+				7B4F5C6F1FD875D5005AEE93 /* ProductsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

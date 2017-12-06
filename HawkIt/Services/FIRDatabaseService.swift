@@ -21,7 +21,6 @@ class FIRDatabaseService {
     static let shared = FIRDatabaseService()
     
     func reference(_ databaseReference: FIRDatabaseReference) -> DatabaseReference {
-        
         return Database.database().reference().child(databaseReference.rawValue)
     }
     
