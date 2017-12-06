@@ -16,6 +16,7 @@
 		7B0E5CCD1FD74DB40086A83B /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E5CCC1FD74DB40086A83B /* ProductCell.swift */; };
 		7B0E5CCF1FD74F5A0086A83B /* Identifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E5CCE1FD74F5A0086A83B /* Identifiers.swift */; };
 		7B0E5CD11FD752000086A83B /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E5CD01FD752000086A83B /* AlertService.swift */; };
+		7B0E5CD31FD777800086A83B /* UserNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0E5CD21FD777800086A83B /* UserNotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		7B0E5CCC1FD74DB40086A83B /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		7B0E5CCE1FD74F5A0086A83B /* Identifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifiers.swift; sourceTree = "<group>"; };
 		7B0E5CD01FD752000086A83B /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
+		7B0E5CD21FD777800086A83B /* UserNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationService.swift; sourceTree = "<group>"; };
+		7B0E5CD41FD77AF70086A83B /* HawkIt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HawkIt.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 		7B0A5D8A1FD7100B009C994F /* HawkIt */ = {
 			isa = PBXGroup;
 			children = (
+				7B0E5CD41FD77AF70086A83B /* HawkIt.entitlements */,
 				7B0A5DA01FD710EF009C994F /* Services */,
 				7B0A5D9F1FD710E9009C994F /* Model */,
 				7B0A5D9E1FD710E3009C994F /* View */,
@@ -104,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7B0E5CD01FD752000086A83B /* AlertService.swift */,
+				7B0E5CD21FD777800086A83B /* UserNotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -141,6 +146,14 @@
 					7B0A5D871FD7100B009C994F = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -181,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B0A5D8E1FD7100B009C994F /* MainVC.swift in Sources */,
+				7B0E5CD31FD777800086A83B /* UserNotificationService.swift in Sources */,
 				7B0E5CCD1FD74DB40086A83B /* ProductCell.swift in Sources */,
 				7B0A5D8C1FD7100B009C994F /* AppDelegate.swift in Sources */,
 				7B0E5CCF1FD74F5A0086A83B /* Identifiers.swift in Sources */,
@@ -322,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HawkIt/HawkIt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999T2QHS45;
 				INFOPLIST_FILE = HawkIt/Info.plist;
@@ -338,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HawkIt/HawkIt.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 999T2QHS45;
 				INFOPLIST_FILE = HawkIt/Info.plist;

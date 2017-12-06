@@ -38,6 +38,7 @@
                                     <navigationItem title="HawkIt" id="AV2-DY-5Cq">
                                         <rightBarButtonItems>
                                             <barButtonItem systemItem="add" id="rXM-4W-7aU">
+                                                <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                                                 <color key="tintColor" red="0.022728307369999999" green="0.4029968646" blue="0.57452010440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="addBtnWasPressed:" destination="BYZ-38-t0r" id="Ar3-Sq-SvM"/>

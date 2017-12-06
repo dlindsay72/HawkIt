@@ -33,7 +33,11 @@ class AlertService {
     }
     
     static func subscribeAlert(in vc: UIViewController) {
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let popover = alert.popoverPresentationController
+        popover?.sourceView = vc.view
+        popover?.sourceRect = CGRect(x: vc.view.frame.width / 2, y: vc.view.frame.height, width: 10, height: 100)
+        
         let subscribe = UIAlertAction(title: "Subscribe", style: .default) { (_) in
             
         }
