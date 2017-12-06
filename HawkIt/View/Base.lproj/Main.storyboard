@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-BoldItalic</string>
+            <string>Optima-ExtraBlack</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="HawkIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Pm-oR-9uu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                <color key="barTintColor" red="0.90671115451388884" green="0.98380533854166663" blue="0.21348741319444445" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="33"/>
+                                    <color key="textColor" red="0.022728307372222201" green="0.40299686456944439" blue="0.57452010441388879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="textShadowColor" red="0.24923655389999999" green="0.74737077949999997" blue="0.99886363739999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <offsetWrapper key="textShadowOffset" horizontal="2" vertical="0.0"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="HawkIt" id="AV2-DY-5Cq">
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="add" id="rXM-4W-7aU">
+                                                <color key="tintColor" red="0.022728307369999999" green="0.4029968646" blue="0.57452010440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="addBtnWasPressed:" destination="BYZ-38-t0r" id="Ar3-Sq-SvM"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="bookmarks" id="hjD-4A-WPv">
+                                                <color key="tintColor" red="0.022728307369999999" green="0.4029968646" blue="0.57452010440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="onSubscribeBtnWasPressed:" destination="BYZ-38-t0r" id="0jr-w8-evi"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X9i-nl-6XH">
+                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="B7A-nB-V6i">
+                                    <size key="itemSize" width="175" height="235"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="PiQ-il-dcj" customClass="ProductCell" customModule="HawkIt" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="175" height="235"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="175" height="235"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sale-3" translatesAutoresizingMaskIntoConstraints="NO" id="ZjM-jm-a1v">
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="136"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="136" id="rDL-Wk-6mo"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Kind of Product" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lQC-jF-Wxg">
+                                                    <rect key="frame" x="20" y="142" width="135" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="B8T-g5-PTF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Optima-ExtraBlack" family="Optima" pointSize="13"/>
+                                                    <color key="textColor" red="0.022728307369999999" green="0.4029968646" blue="0.57452010440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$25.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFh-ms-4SG">
+                                                    <rect key="frame" x="20" y="185" width="135" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="FFA-jE-TjW"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Optima-BoldItalic" family="Optima" pointSize="17"/>
+                                                    <color key="textColor" red="0.022728307369999999" green="0.4029968646" blue="0.57452010440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="WFh-ms-4SG" firstAttribute="top" secondItem="lQC-jF-Wxg" secondAttribute="bottom" constant="8" id="1C1-9n-CYT"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="lQC-jF-Wxg" secondAttribute="trailing" constant="12" id="Dpc-mJ-Nur"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZjM-jm-a1v" secondAttribute="trailing" id="OWc-uY-HpR"/>
+                                            <constraint firstItem="WFh-ms-4SG" firstAttribute="leading" secondItem="PiQ-il-dcj" secondAttribute="leadingMargin" constant="12" id="RG6-vg-jce"/>
+                                            <constraint firstItem="ZjM-jm-a1v" firstAttribute="top" secondItem="PiQ-il-dcj" secondAttribute="top" id="SfT-LJ-g6t"/>
+                                            <constraint firstItem="lQC-jF-Wxg" firstAttribute="leading" secondItem="PiQ-il-dcj" secondAttribute="leadingMargin" constant="12" id="ZCk-bg-hjN"/>
+                                            <constraint firstItem="ZjM-jm-a1v" firstAttribute="leading" secondItem="PiQ-il-dcj" secondAttribute="leading" id="dzO-ty-zzP"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="WFh-ms-4SG" secondAttribute="trailing" constant="12" id="g8Q-gS-bH2"/>
+                                            <constraint firstItem="lQC-jF-Wxg" firstAttribute="top" secondItem="ZjM-jm-a1v" secondAttribute="bottom" constant="6" id="mAy-hV-IKf"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="costLbl" destination="WFh-ms-4SG" id="2dS-vW-NVE"/>
+                                            <outlet property="itemImageView" destination="ZjM-jm-a1v" id="LuC-hR-LaC"/>
+                                            <outlet property="productLbl" destination="lQC-jF-Wxg" id="5SN-46-yCU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8Pm-oR-9uu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uwp-nB-geK"/>
+                            <constraint firstItem="X9i-nl-6XH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZSW-Eq-F49"/>
+                            <constraint firstAttribute="trailing" secondItem="8Pm-oR-9uu" secondAttribute="trailing" id="eAW-QY-nRJ"/>
+                            <constraint firstAttribute="trailing" secondItem="X9i-nl-6XH" secondAttribute="trailing" id="fbJ-ht-lBo"/>
+                            <constraint firstItem="X9i-nl-6XH" firstAttribute="top" secondItem="8Pm-oR-9uu" secondAttribute="bottom" id="kpm-BY-Cmk"/>
+                            <constraint firstItem="8Pm-oR-9uu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="rxI-9U-Acm"/>
+                            <constraint firstAttribute="bottom" secondItem="X9i-nl-6XH" secondAttribute="bottom" id="zYq-Pu-Tg5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="X9i-nl-6XH" id="R21-Yq-GPn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-303" y="-158"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sale-3" width="384" height="500"/>
+    </resources>
+</document>
