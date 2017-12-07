@@ -18,7 +18,11 @@ function sendNotification(product) {
         notification: {
             title: 'New Product Available',
             body: title + ' for $' + cost,
-            sound: 'default'
+            sound: 'default',
+            mutable_content: 'true'
+        },
+        data: {
+            imageUrl: 'https://i.pinimg.com/736x/04/0c/81/040c81a69bf0e2596f86c350ac759437--mens-dress-shirts-mens-shirts.jpg'
         }
     };
     console.log(payload);
