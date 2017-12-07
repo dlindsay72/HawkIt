@@ -39,10 +39,10 @@ class AlertService {
         popover?.sourceRect = CGRect(x: vc.view.frame.width / 2, y: vc.view.frame.height, width: 10, height: 100)
         
         let subscribe = UIAlertAction(title: "Subscribe", style: .default) { (_) in
-            
+            FIRMessagingService.shared.subscribe(to: .newProducts)
         }
         let unsubscribe = UIAlertAction(title: "Unsubscribe", style: .default) { (_) in
-            
+            FIRMessagingService.shared.unsubcribe(from: .newProducts)
         }
         alert.addAction(subscribe)
         alert.addAction(unsubscribe)
