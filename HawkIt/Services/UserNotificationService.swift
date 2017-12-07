@@ -42,12 +42,12 @@ class UserNotificationService: NSObject {
 
 extension UserNotificationService: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        print("UserNoticicationService did receive")
+        print("UserNotificationService did receive")
         completionHandler()
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        print("UserNoticicationService will present")
+        print("UserNotificationService will present")
         
         let options: UNNotificationPresentationOptions = [.alert, .sound]
         completionHandler(options)
